@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Hubble</id>
+    <version>1.0.0.0</version>
+    <title>Hubble</title>
+    <authors>Rocketmakers Ltd.</authors>
+    <owners>Rocketmakers Ltd.</owners>
+    <description>Rocketmakers Roslyn analyzers</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright</copyright>
+    <tags>Hubble, Rocketmakers, Roslyn, analyzers</tags>
+  </metadata>
+  <!-- The convention for analyzers is to put language agnostic dlls in analyzers\dotnet and language specific analyzers in either analyzers\dotnet\cs or analyzers\dotnet\vb -->
+  <files>
+    <file src="output\build\Hubble\Release\*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="output\build\Hubble\Release\tools\*.ps1" target="tools\" />
+  </files>
+</package>
