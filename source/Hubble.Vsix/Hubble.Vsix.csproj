@@ -14,8 +14,8 @@
     <ProjectGuid>{B63E1E4F-CCC0-47E5-95E3-795A0DDF5AF1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rocketmakers.Analyzers.Vsix</RootNamespace>
-    <AssemblyName>Rocketmakers.Analyzers.Vsix</AssemblyName>
+    <RootNamespace>Hubble.Vsix</RootNamespace>
+    <AssemblyName>Hubble.Vsix</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
@@ -53,9 +53,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Rocketmakers.Analyzers\Rocketmakers.Analyzers.csproj">
+    <ProjectReference Include="..\Hubble\Hubble.csproj">
       <Project>{7A920978-97DE-4DFC-ADF6-3402FAE7FF34}</Project>
-      <Name>Rocketmakers.Analyzers</Name>
+      <Name>Hubble</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>

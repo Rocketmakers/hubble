@@ -8,8 +8,8 @@
     <ProjectGuid>{5DDF4FE5-8E05-436A-A76D-6D836BF140F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rocketmakers.Analyzers.Tests</RootNamespace>
-    <AssemblyName>Rocketmakers.Analyzers.Tests</AssemblyName>
+    <RootNamespace>Hubble.Tests</RootNamespace>
+    <AssemblyName>Hubble.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -114,9 +114,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Rocketmakers.Analyzers\Rocketmakers.Analyzers.csproj">
+    <ProjectReference Include="..\Hubble\Hubble.csproj">
       <Project>{7A920978-97DE-4DFC-ADF6-3402FAE7FF34}</Project>
-      <Name>Rocketmakers.Analyzers</Name>
+      <Name>Hubble</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

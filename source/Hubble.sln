@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocketmakers.Analyzers", "Rocketmakers.Analyzers\Rocketmakers.Analyzers.csproj", "{7A920978-97DE-4DFC-ADF6-3402FAE7FF34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hubble", "Hubble\Hubble.csproj", "{7A920978-97DE-4DFC-ADF6-3402FAE7FF34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocketmakers.Analyzers.Tests", "Rocketmakers.Analyzers.Tests\Rocketmakers.Analyzers.Tests.csproj", "{5DDF4FE5-8E05-436A-A76D-6D836BF140F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hubble.Tests", "Hubble.Tests\Hubble.Tests.csproj", "{5DDF4FE5-8E05-436A-A76D-6D836BF140F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocketmakers.Analyzers.Vsix", "Rocketmakers.Analyzers.Vsix\Rocketmakers.Analyzers.Vsix.csproj", "{B63E1E4F-CCC0-47E5-95E3-795A0DDF5AF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hubble.Vsix", "Hubble.Vsix\Hubble.Vsix.csproj", "{B63E1E4F-CCC0-47E5-95E3-795A0DDF5AF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
