@@ -1,0 +1,9 @@
+bin/
+obj/
+work/
+source/packages/
+node_modules/
+*.suo
+*.user
+nuget.exe
+TestResults/
