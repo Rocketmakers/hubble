@@ -35,6 +35,11 @@ var config = {
         {
             name: 'Hubble',
             locations: 'Hubble/bin/**/*'
+        },
+
+        {
+            name: 'Hubble.Vsix',
+            locations: 'Hubble.Vsix/bin/**/*'
         }
     ],
 
@@ -114,6 +119,10 @@ gulp.task('toBuildOut', ['build'], function() {
     return mergedStreams;
 });
 
+gulp.task('publishArtifacts', ['toBuildOut'], function() {
+  console.log("##teamcity[publishArtifacts \'" + path.join(structure.outputBuildPath,  "Hubble.Vsix/Release/Hubble.Vsix.vsix") + "\']");
+});
+
 var packFn = function(){
     return rm_nuget.pack({
         outputDir: structure.outputPackagePath,
@@ -132,4 +141,4 @@ gulp.task('push', ['pack'], function() {
   }
 });
 
-gulp.task('default', ['push']);
+gulp.task('default', ['push', 'publishArtifacts']);
