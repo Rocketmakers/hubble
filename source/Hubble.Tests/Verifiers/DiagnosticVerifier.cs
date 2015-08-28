@@ -6,9 +6,9 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Rocketmakers.Analyzers.Tests.Helpers;
+using Hubble.Tests.Helpers;
 
-namespace Rocketmakers.Analyzers.Tests.Verifiers
+namespace Hubble.Tests.Verifiers
 {
     /// <summary>
     /// Superclass of all Unit Tests for DiagnosticAnalyzers

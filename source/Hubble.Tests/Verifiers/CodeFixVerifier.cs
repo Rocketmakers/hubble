@@ -9,7 +9,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Rocketmakers.Analyzers.Tests.Verifiers
+namespace Hubble.Tests.Verifiers
 {
     /// <summary>
     /// Superclass of all Unit tests made for diagnostics with codefixes.

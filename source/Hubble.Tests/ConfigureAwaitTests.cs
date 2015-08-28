@@ -1,31 +1,19 @@
-﻿using System;
-
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Rocketmakers.Analyzers.Tests.Helpers;
-using Rocketmakers.Analyzers.Tests.Verifiers;
+using Hubble.Tests.Helpers;
+using Hubble.Tests.Verifiers;
 
-namespace Rocketmakers.Analyzers.Tests
+namespace Hubble.Tests
 {
     [TestClass]
     public class ConfigureAwaitTests : CodeFixVerifier
     {
-
-        //No diagnostics expected to show up
-        [TestMethod]
-        public void TestMethod1()
-        {
-            var test = @"";
-
-            this.VerifyCSharpDiagnostic(test);
-        }
-
         //Diagnostic and CodeFix both triggered and checked for
         [TestMethod]
-        public void TestMethod2()
+        public void TestConfigureAwaitAnalyzer()
         {
             var test = @"
     using System;
@@ -38,17 +26,21 @@ namespace Rocketmakers.Analyzers.Tests
     namespace ConsoleApplication1
     {
         class TypeName
-        {   
+        {
+            public async Task DoSomething()
+            {
+                await Task.Delay(1);
+            }
         }
     }";
             var expected = new DiagnosticResult
             {
                 Id = "ConfigureAwaitAnalyzer",
-                Message = String.Format("Type name '{0}' contains lowercase letters", "TypeName"),
+                Message = "await keyword used without first calling ConfigureAwait",
                 Severity = DiagnosticSeverity.Warning,
                 Locations =
                     new[] {
-                            new DiagnosticResultLocation("Test0.cs", 11, 15)
+                            new DiagnosticResultLocation("Test0.cs", 15, 17)
                         }
             };
 
@@ -64,11 +56,15 @@ namespace Rocketmakers.Analyzers.Tests
 
     namespace ConsoleApplication1
     {
-        class TYPENAME
-        {   
+        class TypeName
+        {
+            public async Task DoSomething()
+            {
+                await Task.Delay(1).ConfigureAwait(false);
+            }
         }
     }";
-            this.VerifyCSharpFix(test, fixtest);
+            this.VerifyCSharpFix(test, fixtest, codeFixIndex: 0);
         }
 
         protected override CodeFixProvider GetCSharpCodeFixProvider()

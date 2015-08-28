@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Rocketmakers.Analyzers
+namespace Hubble
 {
     [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(ConfigureAwaitCodeFixProvider)), Shared]
     public class ConfigureAwaitCodeFixProvider : CodeFixProvider

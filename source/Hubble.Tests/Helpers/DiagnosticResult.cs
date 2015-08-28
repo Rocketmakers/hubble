@@ -2,7 +2,7 @@
 
 using Microsoft.CodeAnalysis;
 
-namespace Rocketmakers.Analyzers.Tests.Helpers
+namespace Hubble.Tests.Helpers
 {
     /// <summary>
     /// Location where the diagnostic appears, as determined by path, line number, and column number.
